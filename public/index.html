@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Prompt Assistant — AI Chatbot</title>
+    <meta name="description" content="Chatbot AI yang membantu Anda membuat prompt visual untuk Midjourney, DALL-E, dan AI generatif lainnya.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="app-layout">
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="brand">
+                    <div class="brand-icon">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <div>
+                        <h1>Visual Prompt</h1>
+                        <p class="brand-subtitle">AI CHATBOT ASSISTANT</p>
+                    </div>
+                </div>
+
+                <button class="new-chat-btn" id="new-chat-btn">
+                    <i class="fa-solid fa-plus"></i> Percakapan Baru
+                </button>
+
+                <div class="sidebar-section">
+                    <h3 class="section-title">PRESET GAYA</h3>
+                    <div class="preset-list">
+                        <button class="preset-item" data-preset="Buatkan prompt bergaya Cinematic Film untuk:">
+                            <span class="preset-dot" style="background:#eab308;"></span> Cinematic Film
+                        </button>
+                        <button class="preset-item" data-preset="Buatkan prompt bergaya National Geographic Documentary untuk:">
+                            <span class="preset-dot" style="background:#22c55e;"></span> NatGeo Documentary
+                        </button>
+                        <button class="preset-item" data-preset="Buatkan prompt bergaya Anime Makoto Shinkai untuk:">
+                            <span class="preset-dot" style="background:#ec4899;"></span> Anime Makoto Shinkai
+                        </button>
+                        <button class="preset-item" data-preset="Buatkan prompt bergaya 3D Pixar Render untuk:">
+                            <span class="preset-dot" style="background:#3b82f6;"></span> 3D Pixar Render
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-bottom">
+                <div class="model-info">
+                    <i class="fa-solid fa-microchip"></i>
+                    <span>Powered by Gemini AI</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ===== MAIN CHAT AREA ===== -->
+        <main class="chat-main">
+            <!-- Top Bar -->
+            <header class="chat-header">
+                <div class="header-left">
+                    <button class="mobile-menu-btn" id="mobile-menu-btn">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <h2>Visual Prompt Assistant</h2>
+                </div>
+                <div class="header-badges">
+                    <span class="badge">
+                        <i class="fa-solid fa-temperature-half"></i> Temp: 1.0
+                    </span>
+                    <span class="badge active">
+                        <i class="fa-solid fa-bolt"></i> Kreativitas Tinggi
+                    </span>
+                </div>
+            </header>
+
+            <!-- Chat Messages Area -->
+            <div class="chat-messages" id="chat-box">
+                <!-- Welcome Screen -->
+                <div class="welcome-screen" id="welcome-screen">
+                    <div class="welcome-icon">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h2>Halo! Saya Visual Prompt Assistant 👋</h2>
+                    <p>Saya akan membantu Anda membuat prompt visual yang detail untuk AI seperti Midjourney atau DALL-E. Cukup deskripsikan ide gambar Anda!</p>
+                    <div class="welcome-suggestions">
+                        <button class="suggestion-chip" data-text="Gunung meletus di senja hari dengan lava mengalir">
+                            <i class="fa-solid fa-mountain-sun"></i> Gunung meletus di senja hari
+                        </button>
+                        <button class="suggestion-chip" data-text="Kota futuristik di bawah air dengan gedung-gedung kaca">
+                            <i class="fa-solid fa-city"></i> Kota futuristik bawah air
+                        </button>
+                        <button class="suggestion-chip" data-text="Astronot bermain gitar di permukaan bulan">
+                            <i class="fa-solid fa-user-astronaut"></i> Astronot bermain gitar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Input -->
+            <div class="chat-input-wrapper">
+                <form id="chat-form" class="chat-form">
+                    <div class="input-container">
+                        <textarea id="user-input" placeholder="Deskripsikan ide gambar visual Anda di sini..." rows="1" required></textarea>
+                        <button type="submit" class="send-btn" id="send-btn">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <p class="input-hint">
+                        <i class="fa-solid fa-circle-info"></i> Tekan Enter untuk mengirim, Shift+Enter untuk baris baru
+                    </p>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
