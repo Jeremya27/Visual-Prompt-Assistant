@@ -1,6 +1,6 @@
 # ⚡ Visual Prompt Assistant
 
-Chatbot AI berbasis **Google Gemini** yang membantu pengguna mengubah ide gambar sederhana dalam bahasa Indonesia menjadi prompt visual bahasa Inggris yang detail dan siap pakai untuk platform AI generatif seperti **Midjourney**, **DALL-E**, dan lainnya.
+An AI-powered chatbot built with **Google Gemini** that helps users transform simple image ideas into detailed, ready-to-use visual prompts for generative AI platforms like **Midjourney**, **DALL-E**, and more.
 
 ![Node.js](https://img.shields.io/badge/Node.js-v18+-339933?logo=nodedotjs&logoColor=white)
 ![Express](https://img.shields.io/badge/Express-v5-000000?logo=express&logoColor=white)
@@ -8,44 +8,44 @@ Chatbot AI berbasis **Google Gemini** yang membantu pengguna mengubah ide gambar
 
 ---
 
-## 📋 Deskripsi
+## 📋 Description
 
-**Visual Prompt Assistant** adalah chatbot berbasis AI yang dirancang untuk kreator konten, desainer grafis, dan seniman digital. Chatbot ini menggunakan model **Gemini AI (NLP/LLM)** untuk memproses bahasa alami dan memberikan respons yang relevan.
+**Visual Prompt Assistant** is an AI-based chatbot designed for content creators, graphic designers, and digital artists. This chatbot uses the **Gemini AI (NLP/LLM)** model to process natural language and provide relevant responses.
 
 ### Use Case
-- Mengubah deskripsi gambar sederhana menjadi prompt visual yang lengkap
-- Menyediakan preset gaya populer (Cinematic Film, NatGeo, Anime, 3D Pixar)
-- Mendukung percakapan multi-turn (memory) agar AI memahami konteks
+- Transform simple image descriptions into comprehensive visual prompts
+- Provide popular style presets (Cinematic Film, NatGeo, Anime, 3D Pixar)
+- Support multi-turn conversations (memory) so the AI understands context
 
-### Parameter Kreatif
-| Parameter | Nilai |
+### Creative Parameters
+| Parameter | Value |
 |---|---|
-| Temperature | `1.0` (Kreativitas Tinggi) |
-| Gaya Bahasa | Penjelasan Bahasa Indonesia + Prompt Bahasa Inggris |
-| Domain | Prompt Engineering untuk AI Visual |
-| Fitur Tambahan | Conversation Memory, Preset Gaya, Copy-to-Clipboard |
+| Temperature | `1.0` (High Creativity) |
+| Language Style | Indonesian explanation + English prompt output |
+| Domain | Prompt Engineering for Visual AI |
+| Additional Features | Conversation Memory, Style Presets, Copy-to-Clipboard |
 
 ---
 
-## 🖥️ Screenshots
+## 🖥️ Preview
 
-### Tampilan Utama (Welcome Screen)
-Tampilan awal chatbot dengan suggestion chips dan sidebar preset gaya.
+### Main View (Welcome Screen)
+The initial chatbot interface with suggestion chips and a sidebar for style presets.
 
-### Tampilan Chat
-Percakapan dengan AI yang menghasilkan prompt visual dalam blok kode, lengkap dengan tombol salin.
+### Chat View
+A conversation with the AI that generates visual prompts inside code blocks, complete with a copy button.
 
 ---
 
-## 🚀 Cara Menjalankan
+## 🚀 Getting Started
 
-### Prasyarat
-- [Node.js](https://nodejs.org/) versi 18 atau lebih baru
-- API Key dari [Google AI Studio](https://aistudio.google.com/apikey)
+### Prerequisites
+- [Node.js](https://nodejs.org/) version 18 or later
+- API Key from [Google AI Studio](https://aistudio.google.com/apikey)
 
-### Instalasi
+### Installation
 
-1. **Clone repositori**
+1. **Clone the repository**
    ```bash
    git clone https://github.com/Jeremya27/Visual-Prompt-Assistant.git
    cd Visual-Prompt-Assistant
@@ -56,65 +56,65 @@ Percakapan dengan AI yang menghasilkan prompt visual dalam blok kode, lengkap de
    npm install
    ```
 
-3. **Buat file `.env`** di root folder
+3. **Create a `.env` file** in the root folder
    ```env
    GEMINI_API_KEY=your_api_key_here
-   GEMINI_MODEL=gemini-2.0-flash
+   GEMINI_MODEL=gemini-3.6-flash
    ```
 
-4. **Jalankan server**
+4. **Start the server**
    ```bash
    node index.js
    ```
 
-5. **Buka browser** dan akses:
+5. **Open your browser** and navigate to:
    ```
    http://localhost:3000
    ```
 
 ---
 
-## 📁 Struktur Proyek
+## 📁 Project Structure
 
 ```
 Visual-Prompt-Assistant/
 ├── public/
-│   ├── index.html      # Halaman utama chatbot
-│   ├── style.css        # Styling dark-mode premium
-│   └── script.js        # Logika chatbot (frontend)
-├── index.js             # Server Express + endpoint Gemini AI
-├── package.json         # Dependencies proyek
-├── .env                 # API Key (tidak di-push ke GitHub)
-└── .gitignore           # File yang diabaikan Git
+│   ├── index.html      # Main chatbot page
+│   ├── style.css        # Premium dark-mode styling
+│   └── script.js        # Chatbot logic (frontend)
+├── index.js             # Express server + Gemini AI endpoint
+├── package.json         # Project dependencies
+├── .env                 # API Key (not pushed to GitHub)
+└── .gitignore           # Git ignored files
 ```
 
 ---
 
-## 🛠️ Teknologi yang Digunakan
+## 🛠️ Tech Stack
 
-| Teknologi | Fungsi |
+| Technology | Purpose |
 |---|---|
-| **Node.js** | Runtime JavaScript di server |
-| **Express.js v5** | Web framework untuk API dan static files |
-| **Google Gemini AI** | Model AI (LLM) untuk generate prompt |
-| **Marked.js** | Render markdown dari respons AI |
-| **Font Awesome** | Ikon UI |
-| **Vanilla HTML/CSS/JS** | Frontend tanpa framework |
+| **Node.js** | Server-side JavaScript runtime |
+| **Express.js v5** | Web framework for API and static file serving |
+| **Google Gemini AI** | AI model (LLM) for prompt generation |
+| **Marked.js** | Markdown rendering for AI responses |
+| **Font Awesome** | UI icons |
+| **Vanilla HTML/CSS/JS** | Frontend without frameworks |
 
 ---
 
-## ✨ Fitur Utama
+## ✨ Key Features
 
-- 🤖 **AI-Powered** — Menggunakan Google Gemini untuk menghasilkan prompt visual
-- 💬 **Conversation Memory** — AI mengingat konteks percakapan sebelumnya
-- 🎨 **Preset Gaya** — Pilih gaya visual (Cinematic, Anime, NatGeo, Pixar)
-- 📋 **Copy-to-Clipboard** — Salin prompt hasil generasi dengan satu klik
-- 🌙 **Dark Mode** — Tampilan gelap yang modern dan premium
-- 📱 **Responsive** — Mendukung tampilan mobile dan desktop
-- ⌨️ **Keyboard Shortcut** — Enter untuk kirim, Shift+Enter untuk baris baru
+- 🤖 **AI-Powered** — Uses Google Gemini to generate detailed visual prompts
+- 💬 **Conversation Memory** — AI remembers previous conversation context
+- 🎨 **Style Presets** — Choose a visual style (Cinematic, Anime, NatGeo, Pixar)
+- 📋 **Copy-to-Clipboard** — Copy generated prompts with a single click
+- 🌙 **Dark Mode** — Modern and premium dark-themed interface
+- 📱 **Responsive** — Supports both mobile and desktop views
+- ⌨️ **Keyboard Shortcuts** — Enter to send, Shift+Enter for a new line
 
 ---
 
 ## 👤 Author
 
-**Jeremy** — [@Jeremya27](https://github.com/Jeremya27)
+**Jeremya** — [@Jeremya27](https://github.com/Jeremya27)
